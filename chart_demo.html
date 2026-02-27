@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>行銷策略影響力圖表</title>
+  <style>
+    body {
+      font-family: "Microsoft JhengHei", sans-serif;
+      background: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .chart-container {
+      background: white;
+      border-radius: 16px;
+      padding: 40px 48px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      width: 600px;
+    }
+
+    h2 {
+      font-size: 18px;
+      color: #1a1a1a;
+      margin: 0 0 6px 0;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: #888;
+      margin: 0 0 32px 0;
+    }
+
+    .bar-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 18px;
+      gap: 12px;
+    }
+
+    .label {
+      width: 120px;
+      font-size: 14px;
+      color: #333;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .bar-track {
+      flex: 1;
+      background: #f0f0f0;
+      border-radius: 6px;
+      height: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      background: #c8d8e8;
+      transition: width 1s ease;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+      box-sizing: border-box;
+    }
+
+    .bar-fill.highlight {
+      background: #2d6a9f;
+    }
+
+    .bar-fill.second {
+      background: #4a8bbf;
+    }
+
+    .value {
+      font-size: 13px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .legend {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+      font-size: 12px;
+      color: #aaa;
+      display: flex;
+      gap: 20px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="chart-container">
+    <h2>各行銷策略與消費者購買意願之相關係數</h2>
+    <p class="subtitle">相關係數（r）越高，對購買意願影響越大</p>
+
+    <div class="bar-row">
+      <div class="label">社群媒體行銷</div>
+      <div class="bar-track">
+        <div class="bar-fill highlight" style="width: 72%">
+          <span class="value">0.72</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bar-row">
+      <div class="label">品牌形象</div>
+      <div class="bar-track">
+        <div class="bar-fill second" style="width: 68%">
+          <span class="value">0.68</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bar-row">
+      <div class="label">產品創新</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width: 50%">
+          <span class="value">0.50</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bar-row">
+      <div class="label">促銷活動</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width: 45%">
+          <span class="value">0.45</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bar-row">
+      <div class="label">價格策略</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width: 32%">
+          <span class="value">0.32</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#2d6a9f"></div>
+        <span>影響最大</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#4a8bbf"></div>
+        <span>影響次之</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#c8d8e8"></div>
+        <span>其他策略</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
